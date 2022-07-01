@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid view</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body{
+        justify-content: center;
+        padding: 10px auto;
+        margin: 0px;
+        
+    }
+    h1{
+        font-family: fantasy;
+        font-size: 40px;
+        border-right: 1px solid royalblue;
+        border-bottom: 1px solid royalblue;
+        box-shadow: 4px 4px 5px #888888;
+        width: 25%;
+        color: green;
+        position: '';
+        padding-bottom: 2px;
+        letter-spacing: 3px;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 12px;
+        
+    }
+img{
+    width: 400px;
+    height: 350px;
+    padding: 10px;
+    transition: all 1s;
+          
+}
+img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+nav{
+    margin-top: 0;
+}
+.sub ul li a{
+    color: green;
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 23px;
+        
+    }
+    
+}
+
+
+</style>
+
+<body>
+    <nav class="navbar small">
+        <div class="logo-box" >
+           
+        </div>
+        <div class=" sub">
+            <ul>
+                <li> <a href="home.html">Home</a></li>
+                <li> <a href="#">Our Tours</a></li>
+                <li> <a href="#">Programs</a></li>
+                <li> <a href="#">Register</a></li>
+                <li> <a href="#">About</a></li>
+            </ul>
+        </div>
+</nav>
+    <h1>
+        Discover <br> Our Tours
+    </h1>
+    <br>
+    <div class="container">
+    <img src="img/images (12).jpeg" class="hob">
+    <img src="img/images (13).jpeg" class="hob hob1">
+    <img src="img/images (14).jpeg" class="hob">
+    <img src="img/images (17).jpeg" class="hob">
+    <img src="img/images (18).jpeg" class="hob">
+    <img src="img/images (20).jpeg" class="hob">
+    <img src="img/home.jpeg" class="hob">
+    </div>
+</body>
+</html>

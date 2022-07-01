@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid view</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    /* body{
+        justify-content: center;
+        padding: 10px auto;
+        margin: 0px;
+        
+    } */
+   .grid h1{
+        font-family: fantasy;
+        font-size: 40px;
+        border-right: 1px solid royalblue;
+        border-bottom: 1px solid royalblue;
+        box-shadow: 4px 4px 5px #888888;
+        width: 25%;
+        color: green;
+        position: '';
+        padding-bottom: 2px;
+    }
+
+    .containerr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 12px;
+        
+    }
+.containerr img{
+    width: 400px;
+    height: 350px;
+    padding: 10px;
+    transition: all 1s;
+          
+}
+.containerr img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.sub ul li a{
+    margin-top: 0%;
+    color: green;
+}
+.navbar{
+    margin-top: 1%;
+    display: block;
+}
+
+@media screen and (max-width: 600px){
+   .grid h1{
+        font-size: 27px;
+    }
+}
+</style>
+
+<body>
+<div class=" small">
+    <nav class="navbar small">
+        <div class="logo-box img-flex" >
+                <img src="img/logo.jpg" alt="logo"
+                class="logo">
+        </div>
+        <div class=" sub">
+            <ul id="menuItems">
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="#ourTours">Our Tours</a></li>
+                <li> <a href="#">Programs</a></li>
+                <li> <a href="#">Register</a></li>
+                <li> <a href="#">About</a></li>
+            </ul>
+        </div>
+    
+            <img src="img/menu-bar.png" class="menu-bar " 
+            onclick="menutoggle();" >  
+</nav>
+</div>
+
+    <div class="grid">
+    <h1>
+        Discover Our Tours
+    </h1>
+    <br>
+    <div class="containerr">
+    <img src="img/images (12).jpeg" class="hob">
+    <img src="img/images (13).jpeg" class="hob hob1">
+    <img src="img/images (14).jpeg" class="hob">
+    <img src="img/images (17).jpeg" class="hob">
+    <img src="img/images (18).jpeg" class="hob">
+    <img src="img/images (20).jpeg" class="hob">
+    <img src="img/home.jpeg" class="hob">
+    </div>
+    </div>
+</body>
+</html>

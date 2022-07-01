@@ -1,0 +1,482 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+body{
+    font-size: 14px;
+    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: green;
+    padding: 20px;
+    
+}
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+    rgba(126,213,111,0.8),
+    rgba(29, 185, 131, 0.801)),
+    url(../img/bg.jpeg);
+    background-size: cover; 
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.logo{
+    height: 34px;
+    cursor: pointer;
+}
+.navbar{
+    background: 'green';
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 1%;
+}
+.sub{
+    margin-left: 50%;
+    margin-top: 2%;
+}
+.sub li{
+    display: inline-block;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0 15px; 
+} 
+.sub li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    text-align: center;
+}
+
+.heading-primary{
+    color: whitesmoke;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 30px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 24px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+     
+}
+
+@media screen and (max-width: 600px){
+     .heading-primary-main, .heading-primary-sub{
+        font-weight: 300;
+    letter-spacing: 13px;
+    text-align: center;  
+ }
+       .heading-primary-main{
+           font-weight: 400;
+           text-align: center;
+       }   
+}           
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.btn:link, 
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .9s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+}
+.btn:active{
+    transform: translateY(-1p);
+    box-shadow: 0 10px  rgba(0, 0, 0, .2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777777;
+}
+.btn::after{
+    content: " ";
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .8s;
+}
+.btn-white::after {
+    background-color: #fff;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated{
+    animation: moveInBottom .5s ease-out .70s;
+    animation-fill-mode: backwards;
+}
+
+/* ----------------- gallery content ------ */
+.row{
+    margin-top: -10%;
+}
+.row h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+.row h4{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.row-1{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 300px;
+}
+.col-3 img{
+    height: 40vh;
+    width: 100%;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.col-3 img:hover{
+    transform: scale(1.1);
+}
+
+.sub-header1{
+    display: flex;
+    padding: 3%;
+    margin: 0px;
+}
+
+.image1{
+    padding-left: 0;
+    padding: 2%;
+    
+}
+
+.image{
+    width: 80%;
+    height: 65%;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 1s;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+
+.text-1{
+    margin-top: 5%;
+    padding-left: 2%;
+    text-align: justify;
+    font-size: 15px;
+    width: 60%;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+}
+
+.btn-1{
+    border: 2px solid green;
+    margin-top: 3%;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.btn-1:hover{
+    background: rgb(41, 230, 41);
+    color: whitesmoke;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    padding: 10px;
+}
+
+.hob{
+     width: 400px;
+    height: 350px;
+
+    margin: 20px;
+    transition: all 1s;
+}
+
+.hob:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.text-2{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.btn-2{
+    margin-left: 40%;
+    size: '50px';
+}
+
+.sub-header4{
+    float: left;
+    display: flex;
+    padding: 30px;
+    margin: 12px;
+    margin-left: 5%;
+}
+
+.last-container{
+   justify-content: center;
+   align-items: center;
+}
+.text-5{
+    text-align: center;
+    font-family: '';
+    margin-top: 5%;
+}
+
+.sub-container{
+    text-align: justify;
+    padding-top: 0;
+    width: 90%;
+}
+
+.middle-container{
+ margin-top: 3%;
+ width: 70%;
+ animation-name: moveInLeft;
+ animation-duration: 2s;
+}
+.image-last{
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+}
+.menu-bar{
+    width: 30px;
+    height: 25px;
+    margin-left: 20px;
+    display: none;
+}
+.footer-col{
+    display: flex;
+    text-align: center;
+}
+/* ---- footer -------------- */
+footer{
+    background-image: linear-gradient(to right bottom,
+    rgba(126,213,111,0.8),
+    rgba(29, 185, 131, 0.801));
+}
+.footer-col{
+    color:  white;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+    flex-basis: 30%;
+}
+.footer-col-3 h3{
+    color: '';
+    margin-bottom: 20px;
+}
+.footer-col-3 ul li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.footer hr{
+    border: none;
+    background: white;
+    height: 1px;
+    margin: 30px 0;
+}
+.copy-Right{
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 17px;
+}
+
+
+
+/* -------------- media query for menu ------------- */
+/* @media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background: rgb(148, 238, 215);
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    .navbar ul li{
+        display: block;
+        margin-right: 0px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+    .navbar ul li a{
+        color: green;
+    }
+    .navbar ul li a:hover{
+        font-size: 18px;
+    }
+    .menu-bar{
+        display: block;
+        cursor: pointer;
+    }
+    .sub ul li a {
+        margin-top: 50%;
+    }
+}  */
+
+
+/* -------------- media query for small screen ------------- */
+@media screen and (max-width: 600px){
+    .navbar li a{
+        font-size: 15px;
+        display: block;
+        margin: 3px;
+        justify-content: space-evenly;
+        
+    }
+    .text-box, .heading-primary{
+        margin-top: 6%;
+        font-size: 18px;
+        text-align: center;
+       }
+       .logo{
+        height: 30px;
+        width: 100px;  
+        top: 50px;
+        right: 20px;
+        display: '';
+    }
+    .last-container, .text-5, .sub-container, .middle-container, .image-last,
+   .sub-header1, .image, .text-1 {
+        display: block;
+       padding: 8px;
+       font-size: 16px;
+       width: 95%;
+       text-align: center;
+    }
+
+    .image-last{
+        width: 110%;
+        height: 150%;
+    }
+    .row{
+        margin-top: 11%;
+    }
+    .btn{
+        font-size: 12px;
+        padding: 2px;
+    }
+    .footer-col, .footer-col ul li{
+        text-align: center;
+        display: block;
+        font-size: 18px;
+    }
+    .footer-col{
+        flex-basis: 90%;
+    }    
+
+
+
+}
+
+
